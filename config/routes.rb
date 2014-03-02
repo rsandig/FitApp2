@@ -9,6 +9,7 @@ FitApp::Application.routes.draw do
 #############################################
 
 get "/" => "activities#index"
+root "activities#index"
 
 #users read
 get "/users" => "users#index"
