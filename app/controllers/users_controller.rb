@@ -16,8 +16,7 @@ class UsersController < ApplicationController
         u.username = params["username"]
         u.password = params["password"]
         u.age = params["age"]
-        # NEED TO FIX GENDER##################################################3
-        u.male = true
+        u.male = params["gender"]
         u.save
         redirect_to "/users/index"
     end

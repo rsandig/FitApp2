@@ -49,7 +49,7 @@
 
 <!-- Data -->
     <% @comment_list.each do |comment| %>
-        <% if comment.activity_id == 12 %>
+        <% if comment.activity_id == @activity.id %>
 
             <div class="row">
                 <div class="col-md-2">

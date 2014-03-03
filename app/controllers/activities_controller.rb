@@ -19,6 +19,16 @@ class ActivitiesController < ApplicationController
     end
 
     def create
+        a = Activity.new
+        a.variety = params["variety"]
+        a.user_id = session[:user_id]
+        a.date = params["date"]
+        a.distance = params["distance"]
+        a.time = params["time"]
+        a.description = params["description"]
+        a.photo_url = params["photo_url"]
+        a.save
+        redirect_to "/activities/index"
     end
 
     def edit
